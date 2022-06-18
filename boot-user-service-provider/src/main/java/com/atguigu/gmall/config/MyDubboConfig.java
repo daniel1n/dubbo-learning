@@ -23,16 +23,16 @@ public class MyDubboConfig {
 	public RegistryConfig registryConfig() {
 		RegistryConfig registryConfig = new RegistryConfig();
 		registryConfig.setProtocol("zookeeper");
-		registryConfig.setAddress("127.0.0.1:2181");
+		registryConfig.setAddress("192.168.2.101:2181,192.168.2.101:2181,192.168.2.101:2181");
 		return registryConfig;
 	}
 
-	//<dubbo:protocol name="dubbo" port="20882"></dubbo:protocol>
+	//<dubbo:protocol name="dubbo" port="20881"></dubbo:protocol>
 	@Bean
 	public ProtocolConfig protocolConfig() {
 		ProtocolConfig protocolConfig = new ProtocolConfig();
 		protocolConfig.setName("dubbo");
-		protocolConfig.setPort(20882);
+		protocolConfig.setPort(20881);
 		return protocolConfig;
 	}
 
